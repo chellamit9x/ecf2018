@@ -1,0 +1,103 @@
+extends layout
+
+block content
+    .drop-coin
+        .add-coin-title
+            h3.add-coin-h3 Add New Coin!
+        .add-coin-title1
+            p ( Note: This section is for Admin only! )
+        .add-coin-form
+
+            form(action="/coin/addlogo", method="post", enctype='multipart/form-data')
+
+                .form-group.form-imgcoin
+                    label(for='ImgCoin') Logo for New Coin
+                    input#ImgCoin.form-control-file(name='imgcoin', type='file')
+                .form-btnupload
+                    input.btn.btnupload(type="submit", value="upload")          
+                p.msg-success #{msgupload}
+            .clear-box   
+
+            form(method='POST', action="/coin/add")
+                #form-group.form-title
+                    label Title:
+                    input.form-control(name='title', type='text')
+                #form-group.form-code
+                    label Code
+                    input.form-control(name='code', type='text')
+                #form-group.form-namelogo
+                    label Name Logo:
+                    input.form-control(name='namelogo', type='text', readonly="readonly",  value=namelogo)
+                .clear-box
+                #form-group.form-tokens
+                    lable Tokens
+                    input.form-control(name='tokens', type='text')
+                #form-group.form-moneys
+                    lable Moneys
+                    input.form-control(name='moneys', type='text')
+                #form-group.form-rate
+                    lable Rate
+                    input.form-control(name='rate', type='number')                       
+                #form-group.form-enddate
+                    lable End Date
+                    input.form-control(name='enddate', type='number')
+                .clear-box
+                .form-check.form-telegram
+                    input#telegramCheck.form-check-input(name='tools' ,type='checkbox', value='telegram')
+                    label.form-check-label(for='telegramCheck')
+                        | Telegram
+                .form-check.form-facebook
+                    input#telegramCheck.form-check-input(name='tools', type='checkbox', value='facebook')
+                    label.form-check-label(for='facebookCheck')
+                        | Facebook
+                .form-check.form-bitcointalk
+                    input#telegramCheck.form-check-input(name='tools', type='checkbox', value='bitcointalk')
+                    label.form-check-label(for='bitcointalkCheck')
+                        | Bitcointalk
+                .clear-box
+                .form-check.form-twitter
+                    input#telegramCheck.form-check-input(name='tools', type='checkbox', value='twitter')
+                    label.form-check-label(for='twitterCheck')
+                        | Twitter
+                .form-check.form-email
+                    input#telegramCheck.form-check-input(name='tools', type='checkbox', value='email')
+                    label.form-check-label(for='emailCheck')
+                        | Email
+                .form-check.form-other
+                    input#telegramCheck.form-check-input(name='tools', type='checkbox', value='other')
+                    label.form-check-label(for='otherCheck')
+                        | Other
+                .clear-box
+                #form-group.form-infomation
+                    label Infomation:
+                    textarea.form-control(name='info', type='text')
+                #form-group.form-tutorials
+                    lable Tutorials
+                    textarea.form-control(name='tuts', type='text')
+                #form-group
+                    lable Link Button Firt
+                    input.form-control(name='linkbuttonfirt', type='text')                    
+                #form-group
+                    lable Password
+                    input.form-control(name='password', type='password', value='password')
+                p.msg-error #{msg}
+                #form-group.form-tutorials
+                    lable SupportTut
+                    textarea.form-control(name='support', type='text', readonly="readonly") 
+                        | Join Telegram <a href="" target="_blank"> @protonofficial </a> and enter the verification code
+                        | Join <a href="" target="_blank"> Telegram </a> <br>    
+                        | Enter your ETH address, drag the slider to the right and submit<br>
+                        | Follow <a href="" target="_blank"> Twitter </a> and retweet the latest post<br>
+                        | Like their <a href="" target="_blank"> Facebook page </a><br>
+                        | Mention CargoChainSolutions.io on this <a href="" target="_blank"> Bitcointalk thread </a><br>
+                        | Like them on <a href="" target="_blank"> coinschedule </a><br>
+                        | Submit all the details in the form<br>
+                        | Sign Up on <a href="" target="_blank"> their website </a> and verify your e-mail 
+
+
+
+
+                br
+                .form-btn
+                    input.btn.btn-primary(type="submit", value="Add Coin")
+        

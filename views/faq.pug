@@ -1,0 +1,108 @@
+extends layout
+
+block content
+    .myHeadFaq
+        img.imgFaq(src="/imgicon/faq.png")
+        h3.myheadh3faq Frequently Asked Questions
+    .clear-box 
+    #accordion
+        .card
+            #headingOne.card-header
+                h5.mb-0
+                    button.mybtnfaq.btn.btn-link(data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                        | Airdrop (cryptocurrency), What is it?
+            #collapseOne.collapse.show(aria-labelledby='headingOne', data-parent='#accordion')
+                .card-body
+                    | An airdrop for a cryptocurrency is a procedure of distributing tokens by awarding them to existing holders of a particular blockchain currency, such as Bitcoin or Ethereum. It can also be considered a marketing strategy, since its goal is usually to spread the word about a certain product, coin or exchange in the world of cryptocurrencies. Lately this strategy has become increasingly important due to various social networks, most notably Facebook, refusing to allow adds promoting various virtual coins. In the United States, the practice has raised questions about tax liabilities and whether they amount to income or capital gains. There are two ways creators distribute their tokens: selecting random wallets or publishing the event in airdrop lists.
+        .card
+            #headingTwo.card-header
+                h5.mb-0
+                    button.mybtnfaq.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                        | What am I to do to get those free crypto coins?
+            #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordion')
+                .card-body
+                    | Rules differ from one airdrop to another. The easiest task is the registration on the company’s website. To do that you need the Internet connection only. But to perform other tasks you may need a 
+                    a(href="https://twitter.com/") Twitter
+                    | , 
+                    a(href="http://facebook.com") Facebook 
+                    | (if you are asked to repost something) or an account on the 
+                    a(href="https://bitcointalk.org/") Bitcointalks 
+                    | forum (if you need to contact a team member of the company or write a post there).
+                    br
+                    br
+                    | To start earning coins via EarnCoinFree.com you should:
+                    ul.myUlFaq
+                        li
+                            | Create a new 
+                            a(href="http://gmail.com/") Gmail account
+                            | , because some companies will send you a lot of newsletters when you start working with them.
+                        li 
+                            | Create a new 
+                            a(href="https://telegram.org/") Telegram account
+                            | . It will be helpful for you not to drown in the flood of the partner’s chats.
+                        li
+                            | One more advice, you should have a 
+                            a(href="https://www.myetherwallet.com") MyEtherWallet account.
+                            | This service can process ERC20-standard tokens – 95% of all tokens airdrop sends.
+                    | If you are a successful investor with a diverse portfolio of coins, then you are likely to receive more and more free coins, because the concept of advertising via investors is gaining popularity.
+        .card
+            #headingThree.card-header
+                h5.mb-0
+                    button.mybtnfaq.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                        | Why do blockchains give their tokens for free?
+            #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordion')
+                .card-body
+                    | It is true that if you are not paying for a product, then you are the product. Airdrops are a good way to make the project well-known. If the project is not closed to potential customers, if it does airdrops, then people will know about it and use its cryptocurrency. It will lead to the token price increase because people evaluate the token they own higher than one they do not. This phenomenon is called “endowment” effect.
+                    br
+                    br
+                    | Airdrops have one really important aim – to unite people in one society or network of people, who have tokens.  If you visualize the distribution of the one ICO as a pie chart, the largest part of coins will belong to the developers and company, smaller part is owned by the participants of pre-sales. Also, a part will belong to ICO investors. Notwithstanding that it looks like a monopoly, the aim of airdrops is to create an extra slice of the pie chart – the slice of ordinary users.
+                    br
+                    br
+                    | One more purpose to give tokens for free is the planting of a seed. It is the name of a crypto coin. When you look through the Coinmarketcap and you see a coin you are familiar with, then it is more possible that you will click on it. Just a kind of an advertisement.
+                    br
+                    br
+                    | Tokens are aimed at popularizing a new coin, which is not yet on the stock exchanges, and only pre-sale of tokens is carried out. And airdrop allows you to make a token popular in a short period of time.
+        .card
+            #headingFour.card-header
+                h5.mb-0
+                    button.mybtnfaq.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
+                        | How much money can I earn?
+            #collapseFour.collapse(aria-labelledby='headingFour', data-parent='#accordion')
+                .card-body
+                    | If you enter the system and then spend about 5 or 15 minutes every day to diligently do easy tasks, then in the period of one or two months you will start to receive tokens almost daily. It is a simple math: an average airdrop gives you $5, you may have 3 airdrops per day, hence you can earn $450 per month spending no more than 15 minutes a day. Do you feel that it is not enough? Well, you may participate in more than 3 airdrops! We add from 5 to 10 airdrops to the catalog every day.
+        .card
+            #headingFive.card-header
+                h5.mb-0
+                    button.mybtnfaq.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseFive', aria-expanded='false', aria-controls='collapseFive')
+                        | When will I receive the tokens?
+            #collapseFive.collapse(aria-labelledby='headingFive', data-parent='#accordion')
+                .card-body
+                    | When will I receive the tokens?
+                    br
+                    br
+                    | It is highly important not to make mistakes while filling the fields of personal data! (Do not specify wallets on the exchange, they do not receive tokens, use personal purses only) There are certainly scam projects, but believe me, we spend a lot of time on the selection of the best free distributions and we check them as well.
+                    br
+                    br
+                    | To sum up, the standard accrual of the airdrop occurs in 1-2 months after the filling of the data gaps (the interval before the completion of the ICO and the time left to accrual). Some projects are being promoted at the private sale stage, and this lengthens their path for another month and a half.
+        .card
+            #headingSix.card-header
+                h5.mb-0
+                    button.mybtnfaq.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseSix', aria-expanded='false', aria-controls='collapseSix')
+                        | Where can I exchange my airdropped tokens?
+            #collapseSix.collapse(aria-labelledby='headingSix', data-parent='#accordion')
+                .card-body
+                    | Well, now you have an amount of cryptocurrency, what is next? Some coins, you may get via airdrops, are PRE-ICO. It means that they are not traded yet on the big exchanges. To trade them or check if they are tradeable you may visit our 
+                    a(href="http://earncoinfree.com/coin/exchanges") exchange page
+                    | . If the token is already live you will be able to sell it.
+                    br
+                    br
+                    | We hope, that you and other our users will receive as many airdrops as it is possible and that in the nearest future the value of tokens you get will increase. For instance, the coins from the TOP 40 coins as EM, DECRED & Ripple have done airdrops at first. It is better for you not to  sell it instantaneously, but to wait a bit, it is ok for a holder.
+        .card
+            #headingSeven.card-header
+                h5.mb-0
+                    button.mybtnfaq.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseSeven', aria-expanded='false', aria-controls='collapseSeven')
+                        | How to keep my cryptocurrency safe?
+            #collapseSeven.collapse(aria-labelledby='headingSeven', data-parent='#accordion')
+                .card-body
+                    | There are a lot of different web platforms to keep cryptocurrency on, but they are still vulnerable. The best way to protect airdrops is to store them on a hardware device such as Ledger Nano S or Trezor. If your tokens are not applicable to these “cold” storages then it is better to keep them in an online wallet where you can control the private key. Moreover, you will need a backup (a reserve copy) of these keys in a safe place such as your house. You may just write/print it on a paper and store it. It is important to remember, that you should NEVER give the private key to anyone or post it somewhere. And one more common cybersecurity advice: do not re-use passwords on email and other services, on airdrops as well, because it makes all accounts vulnerable.
+

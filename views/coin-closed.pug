@@ -1,0 +1,49 @@
+extends layout
+
+block content
+    h2.myheadh3faq Airdrops Closed List
+    .clear-box
+    p.msg-success #{msg}
+    br
+    .list-group.drop-coin-main
+        //each coin in coins
+
+        -for (let i = coins.length-1; i >= 0; i--)
+            -if(coins[i].enddate <= 0)
+                .list-group.drop-coin-main1        
+                    -let coin = coins[i]
+                    a.list-group-item.list-group-item-action.list-group-item-light(href='coin/'+coin.title.replace(' ', '-')+'/'+coin._id, data=coin._id)
+                        .row-coin
+                            .row-coin1
+                                .row-coin-logo1
+                                    img.row-coin-logo(alt=coin.title, src='/imgcoin/'+coin.imgcoin)
+                                .row-coin-title1
+                                    h4.row-coin-title #{coin.title} (#{coin.code})
+                                    .row-coin-tokens1-money1
+                                        img.row-coin-tokens-icon(alt=coin.code, src='/imgicon/coin.png', style='height:13px;width:13px; margin-top: -3px;')
+                                        span.row-coin-tokens  #{coin.tokens} tokens  
+                                        span &nbsp; &nbsp;
+                                        img.row-coin-moneys-icon(alt='money', src='/imgicon/money.png', style='height:13px;width:13px; margin-top: -3px;')
+                                        span.row-coin-moneys  #{coin.moneys} $
+                            .row-coin2
+                                -for(let i = 0; i < coin.rate; i++)
+                                    img.row-coin-rate(src="/imgicon/ratetrue.png")
+                                
+                                -for(let i = coin.rate; i < 5; i++)
+                                    img.row-coin-rate(src="/imgicon/ratefalse.png")
+                                    
+                            .row-coin3        
+                                .row-coin-tool1
+                                    -for(let i = 0; i < coin.tools.length; i++)
+                                        img.row-coin-tool(src="/imgicon/icon"+coin.tools[i]+".png")
+                            .row-coin4
+                                .row-coin-enddate
+                                    span Ends in #{coin.enddate} days
+                                .row-coin-views
+                                    span #{coin.views} views
+                            .clear-box2
+                            .row-coin-new
+                                img.imgclick(src="/imgicon/click.png")   
+                            .row-coin-new                                                   
+                                -if(coin.closed != '')
+                                    img.imgnew(src=coin.closed)                                                     

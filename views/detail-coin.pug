@@ -1,0 +1,45 @@
+extends layout
+
+block content
+    .drop-coin
+        .drop-coin-header
+            .drop-coin-header1
+                img.drop-coin-header-logo(alt=coin.title, src='/imgcoin/'+coin.imgcoin)
+            .drop-coin-header1
+                h4.drop-coin-header-title #{coin.title} (#{coin.code})
+            .drop-coin-header1
+                -for(let i = 0; i < coin.rate; i++)
+                    img.row-coin-rate(src="/imgicon/ratetrue.png")
+                -for(let i = coin.rate; i < 5; i++)
+                    img.row-coin-rate(src="/imgicon/ratefalse.png")
+            .drop-coin-left1                      
+                img.row-coin-tokens-icon(alt=coin.code, src='/imgicon/coin.png', style='height:13px;width:13px; margin-top: -3px;')
+                span.row-coin-tokens  #{coin.tokens} tokens  
+                span &nbsp; &nbsp;
+                img.row-coin-moneys-icon(alt='money', src='/imgicon/money.png', style='height:13px;width:13px; margin-top: -3px;')
+                span.row-coin-moneys  #{coin.moneys} $ 
+            .drop-coin-right1  
+                img.row-coin-moneys-icon(alt='money', src='/imgicon/enddate.png', style='height:13px;width:13px; margin-top: -3px;')
+                span  Ends in #{coin.enddate} days
+                span &nbsp; &nbsp;
+                img.row-coin-moneys-icon(alt='money', src='/imgicon/view.png', style='height:13px;width:13px; margin-top: -3px;')
+                span  #{coin.views} views
+            br
+            hr
+        
+        .drop-coin-info
+            .drop-coin-info-content
+                h5.drop-coin-header-title Infomation
+                p #{coin.info}
+            hr
+        .drop-coin-tut
+            .drop-coin-info-content
+                h5.drop-coin-header-title Tutorials Get Coin
+                p.drop-coin-info-content-tool-p Requiered tools: 
+                    -for(let i = 0; i < coin.tools.length; i++)
+                        img.row-coin-tool-detail(src="/imgicon/"+coin.tools[i]+".png")
+        .drop-coin-info-content-body
+            p!=coin.tuts
+           
+        .drop-coin-submit
+            a.drop-coin-submit-a.btn.btn-success.btn-lg.btn3d(href=coin.linkbuttonfirt) Get Your Free Coins Now

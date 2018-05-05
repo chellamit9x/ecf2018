@@ -1,0 +1,73 @@
+html
+    head
+        title #{title}
+        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css', integrity='sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4', crossorigin='anonymous')
+        link(rel='icon', href='/imglogo/icon.png', sizes='32x32')
+        link(rel="stylesheet", href="/css/style.css")
+
+
+    body
+        nav.my-nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            .container
+                a.navbar-brand(href='/')
+                    img(src='/imglogo/logo.png' width='238', height='68')
+                button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+                    li.nav-item.active
+                        a.add-coin.btn.btn-success.btn-lg.btn3d(href='/coin/exchanges')
+                            | Exchanges
+                            span.sr-only (current)
+                ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+                    li.nav-item.active
+                        a.add-coin.btn.btn-success.btn-lg.btn3d(href='/coin/closed')
+                            | Coin Closed
+                            span.sr-only (current)
+                ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+                    li.nav-item.active
+                        a.add-coin.btn.btn-success.btn-lg.btn3d(href='/coin/faq')
+                            | FAQ
+                            span.sr-only (current)
+
+                ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+                    li.nav-item.active
+                        a.add-coin(href='https://www.facebook.com/EarnCoinFree', target="_blank")
+                            img(border='0', alt='Facebook', src='/imgicon/iconfacebook.png', width='36', height='36')
+                                
+                        a.add-coin2(href='https://twitter.com/EarnCoinFree' ,target="_blank")
+                            img(border='0', alt='Twitter', src='/imgicon/icontwitter.png', width='36', height='36')
+                                
+                        a.add-coin2(href='https://t.me/EarnCoinFree', target="_blank")
+                            img(border='0', alt='Telegram', src='/imgicon/icontelegram.png', width='36', height='36')
+                                
+
+
+                #navbarSupportedContent.collapse.navbar-collapse
+                    ul.navbar-nav.mr-auto
+                    form(method='GET', action="/coin/").form-inline.my-2.my-lg-0
+                        input.form-control.mr-sm-2(type='text', placeholder='Coin Search...', aria-label='Search', name="search")
+                        button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+        br
+        .container
+            block content
+            br
+            hr
+            footer
+                .myFooter
+                    .myFooter-logo
+                        img(src='/imglogo/logo.png' width='238', height='68')
+                    .myFooter-link
+                        a(href="/coin/disclaimer") Disclaimer
+                    .myFooter-link
+                        a(href="/coin/terms-and-conditions") Terms & Conditions
+                    .clear-box
+                    .myFooter-acong
+                        | Copyright © 2018 EarnCoinFree.com
+
+
+
+        script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js', integrity='sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ', crossorigin='anonymous')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js', integrity='sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm', crossorigin='anonymous')
+        script(src="/js/main.js")
+        
